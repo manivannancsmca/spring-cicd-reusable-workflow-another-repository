@@ -6,6 +6,10 @@ on:
 
 jobs:
   call-remote-spring-build:
+    if: |
+      github.event_name == 'workflow_dispatch' || 
+      contains(github.event.head_commit.message, 'generate build')
+      
     # Syntax: organization-or-username / repository-name / path-to-file @ branch-or-tag
     uses: manivannancsmca/spring-cicd-reusable-workflow/.github/workflows/reusable-spring-boot.yml@main
     with:
