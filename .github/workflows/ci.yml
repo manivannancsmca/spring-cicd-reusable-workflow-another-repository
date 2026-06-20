@@ -7,7 +7,7 @@ on:
 jobs:
   call-remote-spring-build:
     # Syntax: organization-or-username / repository-name / path-to-file @ branch-or-tag
-    uses: manivannancsmca/spring-cicd-reusable-workflow/.github/workflows/ci.yml@main
+    uses: manivannancsmca/spring-cicd-reusable-workflow/.github/workflows/reusable-spring-boot.yml@main
     with:
       java-version: '17'
       maven-command: 'clean verify'
