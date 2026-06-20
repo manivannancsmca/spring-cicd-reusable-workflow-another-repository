@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: spring-cicd-reusable-workflow-another-repository
