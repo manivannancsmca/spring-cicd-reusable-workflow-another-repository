@@ -1,0 +1,13 @@
+name: Java CI in New Repo
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  call-remote-spring-build:
+    # Syntax: organization-or-username / repository-name / path-to-file @ branch-or-tag
+    uses: manivannancsmca/spring-cicd-reusable-workflow/.github/workflows/ci.yml@main
+    with:
+      java-version: '17'
+      maven-command: 'clean verify'
